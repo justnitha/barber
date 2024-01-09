@@ -9,6 +9,7 @@ export default {
     extend: {
       colors:{
         'hijau':'#addb84',
+        'hijau-200':'#285538',
         'hijau-100' : '#9bc077',
         'coklat':'#333333'
       }

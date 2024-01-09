@@ -1,14 +1,14 @@
 <footer class="bg-coklat">
 <div 
   style="background-image: url('{{ asset('assets/image/interiorD.png') }}'); background-size: cover; background-position: center;" 
-  class="w-full h-[40rem] mt-60">
+  class="w-full h-[40rem]">
   <div class="text-white w-[55%] mx-auto text-center">
     <h4 class="text-7xl pt-32">Are You Ready To Get This Party Started?</h4>
     <p class="text-2xl font-bold mt-6">Book your appointment today so we can make you look great and feel confident.</p>
     <a 
-        href="#" 
+        href="/transaksi/create" 
         class="py-5 px-2 mt-20 bg-hijau hover:bg-hijau-100 flex items-center gap-3 justify-center text-coklat text-2xl w-[45%] mx-auto rounded-full">
-          <div  class=" h-[1px] w-[50px]"></div> 
+          <div  class=" h-[1px] w-[50px] bg-black"></div> 
           Book Your Appointment
       </a>
   </div>

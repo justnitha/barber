@@ -5,42 +5,35 @@ const mobileMenu = document.querySelector('.mobileMenu')
 buttonToogle.addEventListener('click', function(){
     mobileMenu.classList.toggle('hidden');
 })
+
+// navbar akftif
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   var navLinks = document.querySelectorAll(".list a");
+
+//   navLinks.forEach(function (link) {
+//       link.addEventListener("click", function () {
+//           // Remove the "aktif" class from all elements
+//           navLinks.forEach(function (otherLink) {
+//               otherLink.classList.remove("");
+//           });
+
+//           // Add the "aktif" class to the clicked element
+//           link.classList.add("aktif");
+//       });
+//   });
+// });
+
 // scroll navbar
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   var navbar = document.querySelector(".navbar");
-  var timeout;
 
-  function hideNavbar() {
-    navbar.classList.add("hid");
-    navbar.classList.remove("scroler");
-  } 
-
-  function showNavbar() {
-    // Menunjukkan navbar hanya jika window.scrollY lebih besar dari 250
-    if (window.scrollY < 200) {
-      navbar.classList.remove("hid");
-      navbar.classList.remove("scroler");
-      navbar.classList.add("scrolers");
-      // Set timeout untuk menyembunyikan navbar setelah 1 detik diam
-      // timeout = setTimeout(hideNavbar, 1000);
-    }else if (window.scrollY > 200) {
-      navbar.classList.add("hid");
-      navbar.classList.add("scroler");
-      navbar.classList.remove("scrolers");
-      
-      timeout = setTimeout(hideNavbar, 5000);
+  window.addEventListener("scroll", function() {
+    if (window.scrollY > 70) {
+      navbar.classList.add("scroler"); // Tambahkan kelas bg-white saat di-scroll
+    } else {
+      navbar.classList.remove("scroler"); // Hapus kelas bg-white saat tidak di-scroll
     }
-  }
-
-  function resetTimeout() {
-    clearTimeout(timeout);
-    // Set timeout kembali setelah terjadi scroll
-    timeout = setTimeout(hideNavbar, 5000);
-  }
-
-  window.addEventListener("scroll", function () {
-    showNavbar();
-    resetTimeout();
   });
 });
 
@@ -57,7 +50,15 @@ document.addEventListener("DOMContentLoaded", function () {
         navbar.classList.remove("show"); // Hapus kelas bg-white saat tidak di-scroll
       }
     });
-  });
+});
+
+// function wa
+function sendWhatsAppMessage() {
+  let phoneNumber = "6281237273879";
+  let defaultMessage = "Halo kak, kami tertarik dan ingin pesan pasir di Sampurna Abadi Makmur. Bisa tolong dibantu?";
+  let whatsappLink ="https://wa.me/" +phoneNumber +"?text=" +encodeURIComponent(defaultMessage);
+  window.open(whatsappLink,"_blank");
+}
 
 
 

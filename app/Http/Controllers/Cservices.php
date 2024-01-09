@@ -10,6 +10,6 @@ class Cservices extends Controller
     public function services() {
         //load model
         $serv= DB::table('layanan') ->get();
-        return view('Services',["layanan" => $serv]);
+        return view('ui.Services',["layanan" => $serv]);
     }
 }

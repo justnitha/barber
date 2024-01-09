@@ -21,10 +21,11 @@
 
 @include('users.footer')
 
-<div class="contact bg-green-400 hover:bg-green-600 text-white p-5 rounded-full text-4xl">
-  <a href="">
-    <i class="bi bi-whatsapp"></i>
-  </a>
+<div 
+    class="contact bg-green-400 hover:bg-green-600 text-white p-5 rounded-full text-4xl cursor-pointer" 
+    onclick="sendWhatsAppMessage()"
+>
+  <i class="bi bi-whatsapp"></i>
 </div>
    
   
